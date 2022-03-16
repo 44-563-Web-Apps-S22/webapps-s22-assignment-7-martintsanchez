@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Reaction Time</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <h2>Martin Sanchez reaction timer</h2>
+
+  <p id="target">Your time</p>
+  <p id="countdown">Count</p>
+
+  <button type="button"
+  class="btn btn-primary"
+  onclick="startTime()">
+  Start Timer</button>
+ 
+ 
+  <button type="button"
+  class="btn btn-primary"
+  onclick="recordReact()">
+  React Now</button>
+  
+  <script> 
+
+  var myTime = undefined;
+
+  function recordReact() {
+      document.getElementById('myTime').innerHTML = Date.now();
+    //{console.log()}
+    } 
+
+    function startTime(){
+
+    var array = [1, 2, 3, 4]
+    for(var i = 0; i < array.length; i++) {
+    
+    setTimeout(() => {
+      document.getElementById('countdown').innerHTML = [i];
+    }, (3-[i]) * 1000)
+
+  }
+  //   console.log(array[i])
+  // }, 1000);
+  setTimeout(() => {
+      document.getElementById('countdown').innerHTML = [i];
+    }, 3000)
+
+    console.log('check if myTime is undefined');
+    if (myTime = undefined){
+      document.getElementById('target').innerHTML = 'Too Slow'
+    }
+    else { 
+      var buttonTime = Date.now();
+      buttonTime == buttonTime - myTime;
+      document.getElementById('target').innerHTML = 'Time was ' + buttonTime
+        }
+    
+    }
+
+  // function buttonPress2() {
+  //   setTimeout(()=>{
+  //     document.getElementById('target').style.color = "red"
+  //   }, 3000)
+  // }
+  </script>
+
+</body>
+</html>
