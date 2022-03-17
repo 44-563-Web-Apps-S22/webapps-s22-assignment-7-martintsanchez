@@ -214,6 +214,7 @@ width: 20%;
     "tree12", "tree13", "tree14", "tree15", "tree16", "tree17", "tree18", "tree19", "tree20", "tree21", "tree22", "tree23", "tree24", "tree25"]
     var shakeCount = 0;
     var birdLocation = 18;
+    var score = 0;
 
 
     function check(position){
@@ -221,28 +222,22 @@ width: 20%;
     
     if(position !== birdLocation) {
       document.getElementById(ids[position]).src = "https://www.birdwatchersdigest.com/bwdsite/wp-content/uploads/2015/01/robin-e1431602899326.jpeg";
-      document.getElemenyById("shakes").innerHTML = "Number of shakes is " + shakeCount + ".";
+      document.getElementById("shakes").innerHTML = "Number of shakes is " + shakeCount + ".";
     }
     else {
       document.getElementById(ids[position]).src = "https://www.allaboutbirds.org/guide/assets/photo/162823881-480px.jpg";
     }
     locationScore(position, birdLocation);
    }
-
-
    function locationScore(pos1, pos2) {
-    if (pos1 == onclick(3) || pos1 == onclick(8) || pos1 == onclick(18) || pos1 == onclick(23) || pos1 == onclick(10) || pos1 == onclick(11)
-    || pos1 == onclick(12) || pos1 == onclick(14) || pos1 == onclick(12) || pos1 == onclick(14) || pos1 == onclick(22) || pos1 == onclick(24)){
+    if (pos1 == 3 || pos1 == 8 || pos1 == 18 || pos1 == 23 || pos1 == 10 || pos1 == 11
+    || pos1 == 12 || pos1 == 14 || pos1 == 12 || pos1 == 14 || pos1 == 22 || pos1 == 24){
 
       score ++; 
     }
-    else {
-      score + 0;
-    }
-    document.getElemenyById("score").innerHTML = "Number of shakes is " + score + ".";
-
+    document.getElementById("score").innerHTML = "Location score is " + score + ".";
    }
-    
+ 
 </script>
 
 
